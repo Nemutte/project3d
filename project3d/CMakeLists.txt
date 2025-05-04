@@ -2,6 +2,12 @@ add_executable(${PROJECT3D}
 	${CMAKE_CURRENT_SOURCE_DIR}/src/model.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/include/model.h
 	
+	${CMAKE_CURRENT_SOURCE_DIR}/src/object.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/include/object.h
+	
+	${CMAKE_CURRENT_SOURCE_DIR}/src/character.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/include/character.h
+	
 	${CMAKE_CURRENT_SOURCE_DIR}/src/camera.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/include/camera.h
 	

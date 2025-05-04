@@ -53,7 +53,6 @@ V3d& V3d::operator/=(float value)
 }
 V3d V3d::operator+(const V3d& v)
 {
-
 	return V3d(x + v.x, y + v.y, z + v.z);
 }
 V3d V3d::operator-(const V3d& v)
@@ -116,12 +115,6 @@ void V3d::norm()
 		x /= length;
 		y /= length;
 		z /= length;
-	}
-	else
-	{
-		x = 1.f;
-		y = 1.f;
-		z = 1.f;
 	}
 }
 float V3d::length()

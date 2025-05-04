@@ -1,8 +1,12 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "v3.h"
+#include "camera.h"
 
 #include <vector>
+
+
+#define M_PI 3.141592653589793238462643383279502884
 
 class Poligon
 {
@@ -19,5 +23,5 @@ public:
 
 	std::vector<Poligon> poligons;
 	Model();
-	void draw(sf::RenderWindow& window, V3d position);
+	void draw(sf::RenderWindow& window, V3d pos, Camera& camera);
 };
