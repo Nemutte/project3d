@@ -46,24 +46,24 @@ int main()
 				V3d mVector = { 0.f, 0.f, 0.f };
 				character.moveVector *= 0.f;
 				if (windowEvent.key.code == sf::Keyboard::W)
-					character.moveVector += V3d(character.camera.currentDireection.x, 0.f, character.camera.currentDireection.z);
+					character.move_W = true;
 				if (windowEvent.key.code == sf::Keyboard::S)
-					character.moveVector -= V3d(character.camera.currentDireection.x, 0.f, character.camera.currentDireection.z);
+					character.move_S = true;
 				if (windowEvent.key.code == sf::Keyboard::A)
-					character.moveVector -= V3d(character.camera.currentDireection.z, 0.f, character.camera.currentDireection.x);
+					character.move_A = true;
 				if (windowEvent.key.code == sf::Keyboard::D)
-					character.moveVector += V3d(character.camera.currentDireection.z, 0.f, character.camera.currentDireection.x * (-1));
+					character.move_D = true;
 			}
 			else if (windowEvent.type == sf::Event::KeyReleased)
 			{
 				if (windowEvent.key.code == sf::Keyboard::W)
-					character.moveVector -= V3d(character.camera.currentDireection.x, 0.f, character.camera.currentDireection.z);
+					character.move_W = false;
 				if(windowEvent.key.code == sf::Keyboard::S)
-					character.moveVector += V3d(character.camera.currentDireection.x, 0.f, character.camera.currentDireection.z);
+					character.move_S = false;
 				if(windowEvent.key.code == sf::Keyboard::A)
-					character.moveVector += V3d(character.camera.currentDireection.z, 0.f, character.camera.currentDireection.x);
+					character.move_A = false;
 				if(windowEvent.key.code == sf::Keyboard::D)
-					character.moveVector -= V3d(character.camera.currentDireection.z, 0.f, character.camera.currentDireection.x * (-1));
+					character.move_D = false;
 			}
 		}
 		//-------------------------------------------------------------------------
